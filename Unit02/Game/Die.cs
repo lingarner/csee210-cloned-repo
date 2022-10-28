@@ -13,6 +13,42 @@ namespace Unit02.Game
         /// worth.
         /// </summary> 
 
+        
+        public class Die
+        {
+          public int value;
+          public int points;
+
+            // constructor- define the class?
+            public Die()
+            {
+                // these are just inital values
+                // and they get overwritten by Roll()
+                Roll();
+            }
+            public void Roll()
+            {
+                Random r = new Random();
+                value = r.Next(1, 7);
+
+                // ternary conditional
+                // if value = 1 then return 100 ELSE if value is 5 return 50 ELSE return 0
+                // points = (value == 1) ? 100 : (value == 5) ? 50 : 0
+
+                if (value == 1)
+                {
+                    points = 100;
+                }
+                else if (value == 5)
+                {
+                    points = 50;
+                }
+                else{
+                    points = 0;
+                }
+            }
+        }
+
 
     // 2) Create the class constructor. Use the following method comment.
 
@@ -29,3 +65,4 @@ namespace Unit02.Game
         /// </summary>
         
 }
+

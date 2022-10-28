@@ -47,7 +47,7 @@ namespace Unit03.Game
             }
             else if (current < previous)
             {
-                hint = "(>.<) Getting warmer!";
+                hint = "(>.<) Getting warm er!";
             }
 
             return hint;

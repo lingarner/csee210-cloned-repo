@@ -14,8 +14,8 @@ namespace Unit02
         /// <param name="args">The given arguments.</param>
         static int Main(string[] args)
         {
-            Director director = new Director();
-            director.StartGame();
+            Director d = new Director();
+            d.StartGame();
             return 0;
         }
     }

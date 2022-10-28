@@ -10,6 +10,7 @@ namespace Unit02.Game
     /// The responsibility of a Director is to control the sequence of play.
     /// </summary>
     public class Director
+    // Director controls the game
     {
         List<Die> _dice = new List<Die>();
         bool _isPlaying = true;
