@@ -14,13 +14,13 @@ namespace Unit03.Game
     {
         public int _location = 0;
         private List<int> _distance = new List<int>();
+        private Random random = new Random();
 
         /// <summary>
         /// Constructs a new instance of Hider. 
         /// </summary>
         public Hider()
         {
-            Random random = new Random();
             _location = random.Next(1001);
             // start with two so GetHint always works
             _distance.Add(0);

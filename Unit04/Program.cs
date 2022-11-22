@@ -17,10 +17,10 @@ namespace Unit04
         private static int FRAME_RATE = 12;
         private static int MAX_X = 900;
         private static int MAX_Y = 600;
-        private static int CELL_SIZE = 15;
-        private static int FONT_SIZE = 15;
-        private static int COLS = 60;
-        private static int ROWS = 40;
+        private static int CELL_SIZE = 30;
+        private static int FONT_SIZE = 30;
+        private static int COLS = MAX_X / CELL_SIZE;
+        private static int ROWS = MAX_Y / CELL_SIZE;
         private static string CAPTION = "Robot Finds Kitten";
         private static string DATA_PATH = "Data/messages.txt";
         private static Color WHITE = new Color(255, 255, 255);
@@ -67,9 +67,9 @@ namespace Unit04
                 Point position = new Point(x, y);
                 position = position.Scale(CELL_SIZE);
 
-                int r = random.Next(0, 256);
-                int g = random.Next(0, 256);
-                int b = random.Next(0, 256);
+                int r = random.Next(100, 256);
+                int g = random.Next(100, 256);
+                int b = random.Next(100, 256);
                 Color color = new Color(r, g, b);
 
                 Artifact artifact = new Artifact();
@@ -84,7 +84,7 @@ namespace Unit04
             // start the game
             KeyboardService keyboardService = new KeyboardService(CELL_SIZE);
             VideoService videoService 
-                = new VideoService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, false);
+                = new VideoService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, true);
             Director director = new Director(keyboardService, videoService);
             director.StartGame(cast);
 

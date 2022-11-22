@@ -52,7 +52,7 @@ namespace Unit03.Game
         
         public void MoveLocation(int location)
         {
-            this._location = location;
+            _location = location;
         }
     }
 }

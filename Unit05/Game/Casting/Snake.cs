@@ -74,7 +74,7 @@ namespace Unit05.Game.Casting
         {
             foreach (Actor segment in _segments)
             {
-                segment.MoveNext();
+                segment.MoveNext(); //Actor MoveNext method
             }
 
             for (int i = _segments.Count - 1; i > 0; i--)
